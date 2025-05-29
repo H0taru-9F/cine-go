@@ -1,12 +1,24 @@
-import { BrowserRouter as Router } from 'react-router-dom';
-import Dashboard from "@/layouts/Dashboard.jsx";
+import { Suspense } from "react";
 
-function App() {
-  return (
-    <Router>
-      <Dashboard />
-    </Router>
-  );
-}
+// Routes config
+import { BrowserRouter as Router } from "react-router-dom";
+import Routes from "@/routes";
 
-export default App
+//Datepicker
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
+
+// Components
+import PageLoader from "./components/PageLoader";
+
+const App = () => (
+    <LocalizationProvider dateAdapter={AdapterMoment}>
+        <Suspense fallback={<PageLoader />}>
+            <Router>
+                <Routes />
+            </Router>
+        </Suspense>
+    </LocalizationProvider>
+);
+
+export default App;
