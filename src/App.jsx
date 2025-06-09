@@ -1,24 +1,17 @@
-import { Suspense } from "react";
-
-// Routes config
-import { BrowserRouter as Router } from "react-router-dom";
-import Routes from "@/routes";
-
-//Datepicker
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
-
-// Components
-import PageLoader from "./components/PageLoader";
+import routes from "@/routes/index.jsx";
+import SuspenseWithOutlet from "@/components/suspense-with-outlet/SuspenseWithOutlet.jsx";
 
 const App = () => (
+  <>
     <LocalizationProvider dateAdapter={AdapterMoment}>
-        <Suspense fallback={<PageLoader />}>
-            <Router>
-                <Routes />
-            </Router>
-        </Suspense>
+      <SuspenseWithOutlet>
+        <RouterProvider router={createBrowserRouter(routes)} />
+      </SuspenseWithOutlet>
     </LocalizationProvider>
+  </>
 );
 
 export default App;

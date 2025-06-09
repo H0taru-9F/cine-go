@@ -1,6 +1,5 @@
 import movieApi from "./movieApi";
-import cinemaApi from "./cinemaApi";
-import ticketBookingApi from "./ticketBookingApi";
 import userApi from "./userApi";
+import screeningApi from "./screeningApi";
 
-export { movieApi, cinemaApi, ticketBookingApi, userApi };
+export { movieApi, userApi, screeningApi };

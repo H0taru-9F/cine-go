@@ -1,0 +1,60 @@
+.movie-listing-section {
+  padding: 140px 24px; // Increased vertical padding
+  background-color: #1a1a1a; // Dark background colors
+  color: white;
+  display: flex;
+  justify-content: space-around;
+
+  .movie-listing-section__category {
+    margin-bottom: 60px; // Increased space between categories
+
+    &:last-child {
+        margin-bottom: 0; // No bottom margin for the last category
+    }
+  }
+
+  .movie-listing-section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px; // Increased space below header
+  }
+
+  .movie-listing-section__title {
+    color: white;
+    font-size: 2rem; // Adjusted font size
+    font-weight: 600; // Added font weight
+  }
+
+  .movie-listing-section__see-more {
+    color: #00bcd4; // A shade of blue/cyan for links
+    text-decoration: none;
+    font-size: 1rem; // Adjusted font size
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .movie-listing-section__list {
+    display: flex; // Enable flexbox for horizontal layout
+    overflow-x: auto; // Enable horizontal scrolling
+    gap: 20px; // Add space between movie cards
+    padding-bottom: 20px; // Add padding for the scrollbar
+    
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .movie-listing-section__list-item {
+      flex: 0 0 auto; // Prevent items from shrinking
+  }
+
+  // Removed MuiGrid-item styles as we are no longer using Grid
+} 

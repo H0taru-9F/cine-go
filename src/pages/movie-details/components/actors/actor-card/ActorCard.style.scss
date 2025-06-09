@@ -1,0 +1,15 @@
+.actor-card{
+display: flex;
+    flex-direction: column;
+  gap: 12px;
+  align-items: center;
+
+  &__image{
+    height: 280px;
+    width: 212px;
+  }
+
+  &__name{
+
+  }
+}

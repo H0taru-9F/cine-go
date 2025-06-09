@@ -1,0 +1,24 @@
+@use "@/styles/colors" as *;
+
+.auth-register-form {
+  background-color: $color-primary;
+  border-radius: 5px;
+  padding:  32px;
+
+    &__title {
+      color: $color-background;
+      display: flex;
+        justify-content: center;
+    }
+
+  .accept-policies .MuiFormControlLabel-label {
+    font-size: 13px;
+  }
+}
+
+.auth-link-to-login {
+  color: $color-background;
+  a {
+    color: #1976d2;
+  }
+}

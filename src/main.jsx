@@ -1,23 +1,27 @@
 import ReactDOM from "react-dom/client";
-
-// i18next translation
-import "./i18n";
-
-// Redux config
-import { Provider } from "react-redux";
+import {Provider} from "react-redux";
 import configureStore from "@/store";
-
-// Components
-import App from "@/App";
-import GlobalStyles from "@/components/GlobalStyles";
+import App from "@/App.jsx";
+import GlobalStyles from "@/components/global-styles/GlobalStyles.jsx";
+import {StrictMode} from "react";
+import {DevSupport} from "@react-buddy/ide-toolbox";
+import {ComponentPreviews, useInitial} from "@/dev/index.js";
 
 const store = configureStore();
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const rootElement = document.getElementById("root");
+const root = ReactDOM.createRoot(rootElement);
+
 root.render(
-    <Provider store={store}>
-        <GlobalStyles>
-            <App />
-        </GlobalStyles>
-    </Provider>,
+    <StrictMode>
+        <Provider store={store}>
+            <GlobalStyles>
+                <DevSupport ComponentPreviews={ComponentPreviews}
+                            useInitialHook={useInitial}
+                >
+                    <App/>
+                </DevSupport>
+            </GlobalStyles>
+        </Provider>
+    </StrictMode>
 );
