@@ -1,0 +1,67 @@
+@use "@/styles/colors" as *;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&family=Montserrat+Alternates:wght@600;800&display=swap");
+$app-font-heading: "Montserrat Alternates", sans-serif;
+$app-font-body:    "Montserrat", sans-serif;
+
+
+
+.app-typography {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  color: $color-primary;
+}
+
+
+.app-typography--h1 {
+  font-family: $app-font-heading;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -1.2%;
+}
+
+.app-typography--h2 {
+  font-family: $app-font-heading;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -0.75%;
+}
+
+.app-typography--h3 {
+  font-family: $app-font-heading;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6%;
+}
+
+.app-typography--h4 {
+  font-family: $app-font-heading;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.5%;
+}
+
+.app-typography--p {
+  font-family: $app-font-body;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  //letter-spacing: 0%;
+}
+
+.app-typography--q {
+  font-family: $app-font-body;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  //letter-spacing: 0%;
+}
+
+.app-typography--inline {
+  display: inline;
+}

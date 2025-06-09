@@ -1,0 +1,30 @@
+@use "@/styles/colors" as *;
+
+.movie-card {
+  width: 330px;
+  height: 481px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+
+  .movie-card__media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .movie-card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: $color-primary;
+    padding: 10px;
+    box-sizing: border-box;
+
+    &__text{
+      margin: 32px ;
+    }
+  }
+} 

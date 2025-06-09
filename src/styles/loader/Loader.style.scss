@@ -1,0 +1,24 @@
+$loader-size-md: 22px;
+$loader-size-lg: 44px;
+
+.loader {
+  display: flex;
+  justify-content: center;
+  //align-items:  center;
+  //height: 400px;
+
+  &--md {
+    width: $loader-size-md;
+    height: $loader-size-md;
+  }
+
+  &--lg {
+    width: $loader-size-lg;
+    height: $loader-size-lg;
+  }
+
+  &--full-screen {
+    align-items: center;
+    height: 100dvh;
+  }
+}

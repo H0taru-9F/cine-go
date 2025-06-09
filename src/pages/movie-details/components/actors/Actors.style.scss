@@ -1,0 +1,10 @@
+.actors-title{
+  margin:  64px 0 32px 0;
+
+  &__actors{
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding-bottom:88px;
+  }
+}

@@ -1,27 +1,37 @@
 import axios from "axios";
-import apiConfig from "./apiConfig";
+import { getAuthToken, clearAuthData } from "@/utils/auth";
 
 const axiosClient = axios.create({
-  baseURL: process.env.REACT_APP_BASE_URL,
+  baseURL: import.meta.env.VITE_API_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
 });
 
 axiosClient.interceptors.request.use(
   (config) => {
-    config.headers.TokenCybersoft = apiConfig.authToken;
-
-    const user = JSON.parse(localStorage.getItem("user"));
-    if (user) {
-      config.headers.Authorization = `Bearer ${user?.accessToken}`;
+    const token = getAuthToken();
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
     }
-
     return config;
   },
-  (error) => Promise.reject(error),
+  (error) => {
+    return Promise.reject(error);
+  }
 );
 
 axiosClient.interceptors.response.use(
-  (response) => response.data.content,
-  (error) => Promise.reject(error.response.data.content),
+  (response) => {
+    return response.data;
+  },
+  (error) => {
+    if (error.response?.status === 401) {
+      clearAuthData();
+      window.location.href = '/sign-in';
+    }
+    return Promise.reject(error);
+  }
 );
 
 export default axiosClient;

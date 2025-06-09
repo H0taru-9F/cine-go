@@ -1,0 +1,19 @@
+.movie-listing-section{
+  padding: 140px 24px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.movie-listing-section__list{
+  justify-content: center;
+  display: flex; // Enable flexbox for horizontal layout
+  overflow-x: auto; // Enable horizontal scrolling
+  gap: 20px; // Add space between movie cards
+  padding-bottom: 20px; // Add padding for the scrollbar
+}
+.movie-listing-section__list-item{
+  flex: 0 0 auto; // Prevent items from shrinking
+
+}

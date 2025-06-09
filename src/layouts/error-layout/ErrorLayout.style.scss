@@ -1,0 +1,83 @@
+@use "@/styles/colors" as *;
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-fallback {
+  margin: 32px;
+  border-radius: 5px ;
+  background-color: $color-fifth;
+  padding: 42px 56px;
+  box-sizing: border-box;
+
+  @media (max-width: 600px) {
+    padding: 42px 6px;
+  }
+}
+
+.error-header {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.error-icon {
+  height: 60px;
+  width: auto;
+  margin-right: 12px;
+}
+
+.error-title {
+  margin: 0;
+  padding: 0 32px;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: 600; /* приблизна вага заголовка */
+  line-height: 1.2;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+    padding: 0 12px;
+  }
+}
+
+.error-description {
+  margin: 12px 0 16px;
+  font-size: 14px;
+  letter-spacing: 0.1rem;
+  color: #333;
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
+}
+
+.error-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+
+  &-item {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: $color-fourth;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.book-now-button {
+  padding: 8px 30px;
+  display: block;
+  margin-top: 22px;
+  width: max-content;
+}

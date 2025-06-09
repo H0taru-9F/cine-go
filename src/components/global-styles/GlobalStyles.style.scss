@@ -1,0 +1,45 @@
+//@import "../../../../node_modules/normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+
+}
+
+a[href] {
+  text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+  .hide-on-pc {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hide-on-mobile-tablet {
+    display: none !important;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .hide-on-tablet {
+    display: none !important;
+  }
+
+}
+
+@media (max-width: 739px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+}

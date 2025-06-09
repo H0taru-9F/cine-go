@@ -1,0 +1,18 @@
+@use "@/styles/colors" as *;
+
+$bg-color: rgba($color-background, 0.75);
+
+.navbar{
+  justify-content: space-between;
+  padding: 32px 10% 8px 10%;
+  //background-color: $bg-color;
+  align-items: center;
+  display: flex;
+
+  &__wrapper {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+
+  }
+}

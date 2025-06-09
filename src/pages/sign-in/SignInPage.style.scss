@@ -1,0 +1,19 @@
+@use "@/styles/colors" as *;
+
+.auth-login-form {
+    background-color: $color-primary;
+  border-radius: 5px;
+    padding:  32px;
+
+  &__title {
+    color: $color-background;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &__link-to-register {
+    color: $color-background;
+
+  }
+}
