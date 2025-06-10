@@ -1,0 +1,15 @@
+@use "@/styles/colors" as *;
+
+.booking-page{
+  display: flex;
+  height: 100vh;
+  background-color: $color-background;
+
+  &__steps{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:  88px 164px;
+  }
+}

@@ -3,6 +3,7 @@ import actGetUserDetails from "@/store/user/actions/userDetails.js";
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect } from "react";
 import { actLogoutUser } from "@/store/user/actions/signIn.js";
+import Loader from "@/styles/loader/Loader.jsx";
 
 export default function ProfileIcon() {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ export default function ProfileIcon() {
   console.log("user data", userDetails);
 
   if (loading) {
-    return <div>loading</div>;
+    return <Loader />;
   }
 
   if (error) {

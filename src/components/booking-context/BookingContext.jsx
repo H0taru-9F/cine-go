@@ -5,12 +5,10 @@ const BookingContext = createContext(null);
 export function BookingProvider({ children }) {
   const [screening, setScreening] = useState(null);
   const [seats, setSeats] = useState([]);
-  const [personal, setPersonal] = useState({});
 
   const reset = () => {
     setScreening(null);
     setSeats([]);
-    setPersonal({});
   };
 
   return (
@@ -20,8 +18,6 @@ export function BookingProvider({ children }) {
         setScreening,
         seats,
         setSeats,
-        personal,
-        setPersonal,
         reset,
       }}
     >

@@ -1,0 +1,50 @@
+@use '@/styles/colors' as *;
+
+.screenings-selector{
+    display: flex;
+    flex-direction: column;
+
+    &__title{
+        margin: 32px !important;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__dates {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        width: 100%;
+        max-width: 600px;
+        margin: 32px auto;
+    }
+
+    &__times {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        width: 100%;
+        max-width: 600px;
+        margin: 32px auto;
+    }
+
+    &__divider{
+        margin-bottom: 64px;
+    }
+
+    //align-items: center;
+
+    //gap: 1rem;
+    //width: 100%;
+    //max-width: 600px;
+    //margin: auto;
+    &____dates__buton-group{
+
+        &--active{
+            //background-color: $color-primary;
+            //color: $color-white;
+        }
+    }
+}

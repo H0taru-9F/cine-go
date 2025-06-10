@@ -1,0 +1,15 @@
+.booking-details{
+  flex: 1.5;
+  position: relative;
+  overflow: hidden;
+
+  &__background{
+    height: 100%;
+    width: 100%;
+    max-width: 95%;
+    object-fit: cover;
+    filter: blur(10px);
+    transform: scale(1.1);
+
+  }
+}
