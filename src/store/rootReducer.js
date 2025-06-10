@@ -8,8 +8,10 @@ import signUpReducer from "@/store/user/reducers/signUp.js";
 import screeningDateRangeReducer from "@/store/screening/reducers/byDateRange.js";
 import movieByGenreReducer from "@/store/movie/reducers/movieByGenre.js";
 import screeningByFilmIdReducer from "@/store/screening/reducers/byFilmId.js";
+import seatsByScreeningIdReducer from "@/store/screening/reducers/seatsById.js";
 
 const rootReducer = combineReducers({
+  seatsByScreeningId: seatsByScreeningIdReducer,
   screeningByFilmId: screeningByFilmIdReducer,
   movieByGenre: movieByGenreReducer,
   screeningDateRange: screeningDateRangeReducer,

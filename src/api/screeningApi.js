@@ -13,6 +13,10 @@ const screeningApi = {
     const url = `/screenings/films/${filmId}`;
     return axiosClient.get(url);
   },
+  getSetsByScreeningId: (screeningId) => {
+    const url = `/seats/${screeningId}`;
+    return axiosClient.get(url);
+  },
 };
 
 export default screeningApi;
